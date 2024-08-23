@@ -72,3 +72,31 @@ this is related to image generation, and speech recognition
 
 - use model that will statistically predict the next most likely word, taking into a count the previous words used and context
 - very hyped type of ai atm with the big advancements in LLMs
+
+## AI Paradigms
+
+### Modeling
+
+- Transform complex real-world problems into formal mathematical objects (models)
+- modeling is lossy: the real world is rich, which generally can not be captured in its entirety
+
+There can be multiple types of models:
+
+**Relfex**
+
+**State**
+
+**Variable**
+
+**Logic**
+
+
+### Interface
+
+- given a model, interface seeks to answer questions with respect to the model
+- find efficient algorithms that can answer the questions
+
+### Learning
+
+- when the model commbined with data learns to predict outcomes
+- build empty model + data + learning -> model with learnt parameters
