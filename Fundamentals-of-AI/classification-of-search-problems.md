@@ -28,6 +28,7 @@ Search problems get divided into 3 big categories:
 ### Classical Search Problem
 
 **The 8-puzzle**
+
 3*3 board with eight nums and a space
 tile adj to blank space can move
 State: specifies the location of the tiles and the blank space
