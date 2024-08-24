@@ -31,9 +31,10 @@ Search problems get divided into 3 big categories:
 
 3*3 board with eight nums and a space
 tile adj to blank space can move
-State: specifies the location of the tiles and the blank space
-Action: move blank space l, r, u, d
-Goal: find a sequence of actions that leads from start state to a specified goal state
+
+- State: specifies the location of the tiles and the blank space
+- Action: move blank space l, r, u, d
+- Goal: find a sequence of actions that leads from start state to a specified goal state
 
 To solve this we can use a *global search* and make a tree of actions with bfs. The goal state will then be reached at some point on one of the leaf nodes.
 
