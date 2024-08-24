@@ -48,6 +48,38 @@ In order to get rid of the iterative process that we have we use the following t
 
 *end of functional style IV*
 
-### Questions to think about:
+# Expressions and Symbols
+
+## Expressions vs Statements
+- a *statement* is a command that we execute and perform a certain action. 
+- an *expression* returns a value/result.
+
+There are some langagues that only have expressions and do not use statements. One of the benefist is that you can ignore the result if you dont want to use it but with a statement there is no result to look at. An example of this programming language is Ruby.
+
+If everything is an expression then the number of temp variables and ceremony is reduced since everything returns something and the return value can be used further.
+
+## Interning
+
+Interning is the re=use of objects of equal value on-demand instead of creating new objects. This way if there are multiple vars with the assigned value of "hello" they all point to the same instace of "hello" in memory instead of creating multiple instances. This can be a pretty powerful concept if used correctly.
+
+## Symbols
+
+A symbol is like a reference to a variable. This helps to only have something that represents an item and not necessarily the value itself. This can be seen on the `method_missing` on ruby when creating a class that gets a method called that does not exits.
+
+```
+class Person
+    def method_missing(name, *args)
+        puts "called method ${name}"
+        puts name.class // Symbol, this is a reference to the method called
+    end
+end
+
+sam = Person.new
+sam.sing // prints "called method sing"
+```
+
+*end of week 1 lectures*
+
+# Questions to think about:
 **How to get around a mutable application state?**
 **Pattern matching with Erlang**
