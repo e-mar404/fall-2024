@@ -38,4 +38,16 @@ In order to get rid of the iterative process that we have we use the following t
 2. **filter**
 3. **reduce**
 
-*end of functional style part II*
+## Mutability vs Immutability
+
+- In a pure functional language we work with the constraint of immutability. I is still possible to build a proper app with a funtional language but just in a different way.
+
+- A programming language that follow this pure functional way is Erlang. Scala on the other hand has functional programming capabilities and style of writing but still has mutability.
+
+- Even with functional style languages we can use different languages depending on the end goal.
+
+*end of functional style IV*
+
+### Questions to think about:
+**How to get around a mutable application state?**
+**Pattern matching with Erlang**
