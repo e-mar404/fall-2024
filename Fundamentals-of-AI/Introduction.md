@@ -78,25 +78,41 @@ this is related to image generation, and speech recognition
 ### Modeling
 
 - Transform complex real-world problems into formal mathematical objects (models)
+- simplifies world
 - modeling is lossy: the real world is rich, which generally can not be captured in its entirety
 
 There can be multiple types of models:
 
 **Relfex**
+- performs fixed sequence of computations on a given input
+- feed-forward (no backtracking)
+- too simple for tasks that require more forethought
+- Ex: linear classifiers, deep neural networks
 
 **State**
+- model the state of a world and transitions between states which are triggered by actions
+- similar to a behaviour tree?
+- think in terms of states, actions, and cost/rewards
+- Applications: games, robotics, natural language processing
+- other problems that take use of state based models are: search problems (you control everything), arkov decision problems (against nature), adversarial games (against opponents)
 
 **Variable**
+- think in terms of variables, factors and weights
+- the dependency structure is given by the graph structure, which formally defines a joint probability distribution over all variables.
+- Ex: bayesian networks (tracking cars from sensors), constraint satisfaction problems (sudoku, scheduling)
 
 **Logic**
-
+- think of a virtual assistant
+- needs to remember context what it has been told and answer questions that require drawing inferences from its knowledge
 
 ### Interface
 
 - given a model, interface seeks to answer questions with respect to the model
 - find efficient algorithms that can answer the questions
+- ansewr questions against the model
 
 ### Learning
 
 - when the model commbined with data learns to predict outcomes
 - build empty model + data + learning -> model with learnt parameters
+- construct model from data
