@@ -5,12 +5,11 @@
 
 **Artificial Intelligence: A Modern Approach**
 
-    Ch. 3
-    Ch. 4 (129-140)
-    Ch. 5 (164-183)
+    Ch. 3 (63)
+    Ch. 4 (129-140) starts @ 110
+    Ch. 5 (164-183) starts @ 146
 
 ---
-
 
 ## Classification of search problems, terminology and overview
 
