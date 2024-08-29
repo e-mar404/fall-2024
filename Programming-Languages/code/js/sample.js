@@ -1,4 +1,6 @@
 const nums = [1, 2, 3, 4]
-nums.map(num => console.log(num))
+const doubled = nums.map(num => num * 2)
 
-
+console.log(nums)
+console.log("test")
+console.log(doubled)
