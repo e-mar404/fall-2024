@@ -1,3 +1,7 @@
-puts "hello from sample file"
-puts "hello from sample file 2"
-puts "hello from sample file 3"
+value = 1
+puts value
+puts value.class
+
+value = "hello"
+puts value
+puts value.class
