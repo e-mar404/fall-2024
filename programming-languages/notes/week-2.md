@@ -63,4 +63,63 @@ for (int e : scores) {
 // this will compile successfuly but fail at runtime by the missmatched types
 ```
 
-*end of typing - part II*
+**Pros**:
++ included safety
++ early error detection
+
+**Cons**:
+- can have too much ceremony
+- there can be ways to get around the type checking still giving issues with type safety
+
+### Dynamic Typing
+
+**Pros**:
++ meta programming: lets you write code that will create functionality at runtime, letting anything happen (like a method that does not exist) 
+    - can handle exceptions of non existent methods
+    - not done because of dynamic typing
++ greater flexibility
+
+**Cons*:
+- can lead to more errors (and not all errors might be caught quickly)
+- can become harder to read and maintain and cause bugs
+
+## Language Designs
+
+### Design by contract
+
+- Usually languages that rely on interfaces
+- contracts are embedded as assertions and get automatically validated during runtime
+- usually used by static languages
+
+### Design by capability
+
+- similar to a handshake
+- collaboration
+- identify risks in risk assessments and then reducing/adapting to them
+- usually used by dynamic languages
+
+## Strong vs Weak Typing
+
+For **strongly typed** languages the type is verified at runtime to make sure it is the type that we are expecting. An example of this is type casting in java, if you type cast to an invalid type then there is a runtime exception.
+
+For **weak typing**, there is not a runtime exception type check. The operation goes through and if there is not proper checks in the code itself then there is no way of knowing what will happen. An example is C++ because when using pointers it doesn't carry the type it just gives a pointer to the address and the code should be the one dealing with the type checking.
+
+It is wrong to assume that static languages only belong to strongly typed and that dynamic languages belong to weakly typed languages. Strong v weak typing has nothing to do with weather there is a type check at compile time or not, only if there is a type check at runtime.
+
+### Languages and their typing
+
+**Static/Strong**:
+- Scala
+- Java
+
+**Static/Weak**:
+- C/C++
+
+**Dynamic/Strong**:
+- kinda groovy
+- Ruby
+
+**Dynamic/Weak**:
+- Perl
+
+*end of typing - part IV*
