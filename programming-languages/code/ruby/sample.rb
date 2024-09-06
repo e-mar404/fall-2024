@@ -1,17 +1,17 @@
 class Person
   def work
-    puts "workig.."
+    puts "working..."
   end
 
   def method_missing(name, *args)
-    activities = ['Teis', 'Football']
+    activities = ['Tennis', 'Football']
 
     activity = name.to_s.split('play')[1]
 
     if (activities.include?(activity))
       puts "is like to play #{activity}"
     else
-      puts "i dot play #{activity}"
+      puts "i dont play #{activity}"
     end
   end
 end
@@ -19,6 +19,6 @@ end
 sam = Person.new
 sam.work
 
-sam.playTeis
+sam.playTennis
 sam.playFootball
 sam.playSomethig
