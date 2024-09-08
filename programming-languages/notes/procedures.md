@@ -57,4 +57,41 @@ square(2+3) = (2+3) * (2+3) = 5 * 5 = 25
 - easy to comprehend, explain, express and maintain
 - if a language does not protect encapsulation and abstraction it makes decomposing procedures harder 
 
-*end of Procedures - Part I*
+### Finding the square root
+
+**Successive Refinement**
+//      Sqrt
+//       |
+// Sqrt Successive
+//     /      \
+// Good Enough  Improve Guess
+//  /     \           \
+// Square  Abs       avg
+
+## Abstractions and Encapsulation
+
+- procedures should abstract and encapsulate the details
+- they should tell you what they provide and hide the details of how they do it, we should not care how a procedure does things
+- user should not be forced to know the details of the implementation
+
+*sqrt function above breaks the encapsulation requirements*
+
+## Formal Parameters & Binding
+
+- names chosen for formal parameters should not affect the choice of names by user of a procedure
+- formal parameters are bounded variables
+- local variables are only visible within procedures
+- these are not affect by outside procedures or affect them
+
+## Dependency
+
+- procedures tend to depend on other procedures
+- increases coupling
+- if you modify the name of a procedure your procedure depends on, you will affect your procedures implementation
+
+## Lexical Scoping
+
+- you don't have to pass parameters repeatedly to nested procedures
+- they can use parameters both formal and local in further computations defined in the nesting block 
+
+*end of Procedures - Part III*
