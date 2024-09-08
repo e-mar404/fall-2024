@@ -94,4 +94,55 @@ square(2+3) = (2+3) * (2+3) = 5 * 5 = 25
 - you don't have to pass parameters repeatedly to nested procedures
 - they can use parameters both formal and local in further computations defined in the nesting block 
 
-*end of Procedures - Part III*
+## Procedures in different languages
+
+### Ruby
+
+``` Ruby
+def max(*numbers)
+  max_value = numbers[0]
+  
+  numbers.each do |e|
+    max_value = e if e > max_value
+  end
+
+  max_value
+end
+
+puts max(1, 2, 4, 5 , 0)
+```
+
+### Scala 
+
+``` Scala
+def max(numbers: Int*) = {
+    var maxValue = numbers(0)
+
+    for (e <- numbers) {
+      if (e > maxValue)
+        maxValue = e
+    }
+
+    maxValue
+}
+
+println(max(1, 2, 3, 5, 0))
+```
+
+### Erlang 
+
+``` Erlang
+#!/usr/bin/env escript
+
+main(_) ->
+  io:format("~p~n", [max([1, 2, 3, 4, 5, 0])]).
+
+max2(A, B) when A > B -> A;
+max2(_, B) -> B.
+
+max([H | []]) -> H;
+max([H | T]) ->
+max2(H, max(T)).
+```
+
+*end of Procedures - Part IV*
