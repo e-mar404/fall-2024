@@ -67,7 +67,6 @@ def winner ()
   puts "#{theWinner} won with #{maxScore}"
 end
 ```
-
 ```ruby
 # commands.rb
 joe 12
@@ -75,7 +74,6 @@ bob 14
 jim 8
 winner
 ```
-
 ```ruby
 # sample.rb
 dsl = File.open("ruby/commands.dsl").read
@@ -89,4 +87,4 @@ eval(code + dsl)
 "GUIs make a bellow average user productive but makes an expert user and dumbs them down" -Venkat
 To become an expert you have to go past the GUI?
 
-*end of lecture II*
+*end of lecture IV*
