@@ -3,26 +3,26 @@ from queue import PriorityQueue
 class Graph:
     def __init__(self, size):
         self.nodes = size + 1
-        self.adjList = {}
+        self.adj_list = {}
         self.path = {}
 
         for node in range(0, self.nodes):
-            self.adjList[node] = []
+            self.adj_list[node] = []
             self.path[node] = []
 
-    def addEdges(self, edges):
+    def add_edges(self, edges):
         for [src, dst, weight] in edges:
-            self.adjList[src].append([dst, weight])
+            self.adj_list[src].append([dst, weight])
 
-    def setDistance(self):
+    def set_distance(self):
         dist = {}
 
-        for src in self.adjList:
+        for src in self.adj_list:
             dist[src] = float('inf') 
 
         return dist
 
-    def resetPath(self, dst):
+    def reset_path(self, dst):
         self.path[dst] = []
 
     def track(self, src, dst):
@@ -31,8 +31,8 @@ class Graph:
 
         self.path[dst].append(dst)
 
-    def shortestPath(self, start):
-        dist = self.setDistance()
+    def shortest_path(self, start):
+        dist = self.set_distance()
         dist[start] = 0
         self.track(start, start)
 
@@ -42,10 +42,10 @@ class Graph:
         while not pq.empty():
             src = pq.get()[1]
             
-            for dst, weight in self.adjList[src]:
+            for dst, weight in self.adj_list[src]:
                 if(dist[dst] > dist[src] + weight):
                     if (dist[dst] != float('inf')):
-                        self.resetPath(dst)
+                        self.reset_path(dst)
 
                     self.track(src, dst)
 
@@ -54,8 +54,15 @@ class Graph:
 
         return dist, self.path
 
+    def print_graph(self):
+        print('node x can reach [[y, weight], ... , [z, weight]]')
+
+        for node in self.adj_list:
+            print('node %s can reach %s' %
+                  (node, self.adj_list[node]))
+
 g = Graph(7)
-g.addEdges([     
+g.add_edges([     
     [0, 1, 2],
     [0, 7, 3],
     [0, 3, 2],
@@ -68,8 +75,9 @@ g.addEdges([
     [7, 4, 4],
     [7, 5, 6]])
 
-minDistances, path = g.shortestPath(0)
+g.print_graph()
+min_distances, path = g.shortest_path(0)
 print('start | goal | shortest distance | path taken')
-print(' 0    |  5   |  %-17s| %s' % (minDistances[5], path[5]))
-print(' 0    |  6   |  %-17s| %s' % (minDistances[6], path[6]))
-print(' 0    |  7   |  %-17s| %s' % (minDistances[7], path[7]))
+print(' 0    |  5   |  %-17s| %s' % (min_distances[5], path[5]))
+print(' 0    |  6   |  %-17s| %s' % (min_distances[6], path[6]))
+print(' 0    |  7   |  %-17s| %s' % (min_distances[7], path[7]))
