@@ -6,3 +6,4 @@ programming-languages/past-exams/
 
 # global
 *.DS_Store
+/.ruby_lsp/

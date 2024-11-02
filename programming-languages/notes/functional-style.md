@@ -28,7 +28,7 @@ Specify a body of code that gets executed within the contexts of the elements of
 ### Scope of function blocks
 
 { |e| e * 2 } -> this is a block/function value
-{ |e| e * factor } -> this is a closure because factor had to be bounded or losed over to a variable outside the scope of the block
+{ |e| e * factor } -> this is a closure because factor had to be bounded or closed over to a variable outside the scope of the block
 
 ## Functional style basics
 
@@ -40,7 +40,7 @@ In order to get rid of the iterative process that we have we use the following t
 
 ## Mutability vs Immutability
 
-- In a pure functional language we work with the constraint of immutability. I is still possible to build a proper app with a funtional language but just in a different way.
+- In a pure functional language we work with the constraint of immutability. I is still possible to build a proper app with a functional language but just in a different way.
 
 - A programming language that follow this pure functional way is Erlang. Scala on the other hand has functional programming capabilities and style of writing but still has mutability.
 
@@ -54,7 +54,7 @@ In order to get rid of the iterative process that we have we use the following t
 - a *statement* is a command that we execute and perform a certain action. 
 - an *expression* returns a value/result.
 
-There are some langagues that only have expressions and do not use statements. One of the benefist is that you can ignore the result if you dont want to use it but with a statement there is no result to look at. An example of this programming language is Ruby.
+There are some languages that only have expressions and do not use statements. One of the benefits is that you can ignore the result if you don't want to use it but with a statement there is no result to look at. An example of this programming language is Ruby.
 
 If everything is an expression then the number of temp variables and ceremony is reduced since everything returns something and the return value can be used further.
 
